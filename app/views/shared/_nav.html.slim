@@ -5,11 +5,27 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="/" /
+      a.navbar-brand href="#{root_path}" /
       p style=("font-family:Arial; font-size:14px; background:#234763; color:#fff; padding:8px 10px 8px 10px; border-radius:4px; margin-top:-5px; border-radius:4px; line-height:1;")
         b В
     .navbar-collapse.collapse
       ul.nav.navbar-nav
+        - if current_user
+          ul.nav.nav-pills style="float:left;"
+            li.dropdown
+              a data-toggle="dropdown" style=("padding-top:10px; padding-bottom:10px; color:#fff; border-radius:0px; cursor:pointer;")
+                img#id_top_avatar height="30" src="/avatar/2598.jpg?r=56563" style="border-radius:100px;" width="30" /
+                | jnio
+                b.caret
+              ul#menu3.dropdown-menu style=("margin-top:0px; border-top:none;")
+                li
+                  a href="/id2598" tabindex="-1"  My page
+                li
+                  a href="/Edit" tabindex="-1"  Edit data
+                li
+                  a href="/Settings" tabindex="-1"  Settings page
+                li
+                  a onclick="exit();" tabindex="-1"  Exit
         li
           a href="/News"  News
         li

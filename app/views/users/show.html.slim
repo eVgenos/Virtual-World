@@ -1,0 +1,306 @@
+.row
+  .col-md-2 style="padding-bottom:15px;" 
+    ul.list-group style="margin-bottom:0px;" 
+    a href="/News" 
+      li.list-group-item style=("padding-left:35px; font-size:12px; line-height:1.5;") 
+        span#id_u_news.badge style="display:none;" 
+        span.icon-newspaper style=("position:absolute; margin-left:-28px; font-size:17px; color:#b3c0ca;") 
+        span.user_top_menu News
+        span.user_top_menu2 &nbsp;
+    a onclick=("page=1; more=false; token='15422fca09d7296aa99baaebb9f18df2'; otvety();") 
+      li.list-group-item style=("padding-left:35px; font-size:12px; line-height:1.5; margin-top:5px;") 
+        span#id_u_otvety.badge style="display:none;" 
+        span.icon-lightning style=("position:absolute; margin-left:-28px; font-size:17px; color:#b3c0ca;") 
+        span.user_top_menu Answers
+        span.user_top_menu2 &nbsp;
+    a href="/Friends" 
+      li.list-group-item style=("padding-left:35px; font-size:12px; line-height:1.5; margin-top:5px;") 
+        span#id_u_friends.badge style="display:none;" 
+        span.icon-user2 style=("position:absolute; margin-left:-28px; font-size:17px; color:#b3c0ca;") 
+        span.user_top_menu Friends
+        span.user_top_menu2 &nbsp;
+    a onclick=("page=1; more=false; token='18f939aab50b46201f4a2f7b5ada05b0'; visits();") 
+      li.list-group-item style=("padding-left:35px; font-size:12px; line-height:1.5; margin-top:5px;") 
+        span#id_u_visits.badge style="display:none;" 
+        span.icon-star style=("position:absolute; margin-left:-28px; font-size:17px; color:#b3c0ca;") 
+        span.user_top_menu Visits
+        span.user_top_menu2 &nbsp;
+    a href="/Message" 
+      li.list-group-item style=("padding-left:35px; font-size:12px; line-height:1.5; margin-top:5px;") 
+        span#id_u_dialogs.badge style="display:none;" 
+        span.icon-envelope2 style=("position:absolute; margin-left:-28px; margin-top:-1px; font-size:17px; color:#b3c0ca;") 
+        span.user_top_menu Dialogs
+        span.user_top_menu2 &nbsp;
+  .col-md-10
+    div style=("padding:20px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;") 
+      .row
+        .col-md-2 style="text-align:center;" 
+          img#id_avatar data-placement="top" data-toggle="tooltip" height="100" onclick="upload_avatar();" onmouseout="$('#id_avatar').tooltip('hide');" onmouseover="$('#id_avatar').tooltip('show');" src="/avatar/2598.jpg?r=20247" style=("border-radius:100px; cursor:pointer;") title=("To change the avatar") width="100" /
+        .col-md-3 style=("text-align:center; padding-top:15px;") 
+          h4 style="margin:0px;" 
+            | jnio
+            span.icon-lamp style=("color:#46af48; font-size:17px;") 
+          span style=("color:#777; font-size:11px; line-height:1.5;")  Online Now
+          br/
+          p#status_body style="height:0px;" 
+          span#id_status_text onclick="status_edit();" style="cursor:pointer;"  Write a message...
+        .col-md-4
+          .row
+            div style=("width:33%; text-align:center; padding-top:15px; float:left;") 
+              h4 style=("color:#2B587A; margin:0px;")  0
+              p style="font-size:11px;"  Friends
+            div style=("width:33%; text-align:center; padding-top:15px; float:left;") 
+              h4 style=("color:#2B587A; margin:0px;")  3
+              p style="font-size:11px;"  Photos
+            div style=("width:33%; text-align:center; padding-top:15px; float:left;") 
+              h4 style=("color:#2B587A; margin:0px;")  3
+              p style="font-size:11px;"  Publications
+        .col-md-3 style=("text-align:center; padding-top:15px;") 
+          a href="/Edit" 
+            button.btn.btn-primary onclick="" style="width:100%;" type="button"  Edit information
+          a href="/Settings" 
+            button.btn.btn-primary style=("width:100%; margin-top:10px;") type="button"  Settings
+      section#slider_block.regular.slider style=("margin-top:15px; display:none;") 
+        div onclick=("photo_id=0; start_photo=true; photo_show();") style=("padding:calc((100% / 3) / 2 - 1px); background-image:url(/photo/m_1337343398.jpg); margin-right:2px; background-size:cover; background-position:top; cursor:pointer;") 
+        div onclick=("photo_id=1; start_photo=true; photo_show();") style=("padding:calc((100% / 3) / 2 - 1px); background-image:url(/photo/m_1044643274.jpg); margin-right:2px; background-size:cover; background-position:top; cursor:pointer;") 
+        div onclick=("photo_id=2; start_photo=true; photo_show();") style=("padding:calc((100% / 3) / 2 - 1px); background-image:url(/photo/m_1063528470.jpg); margin-right:2px; background-size:cover; background-position:top; cursor:pointer;") 
+      #upload_photoslide.row style=("margin:0px; margin-top:12px; display:none;") 
+        #id_upload_foto_status style=("width:25%; float:left;") 
+        div style=("width:75%; float:right; text-align:right;") 
+          a href="/Photos?id=2598" style="line-height:1.6;"  All photos
+    .row
+      .col-md-3
+        div style=("padding:20px; padding-bottom:0px; padding-top:7px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;") 
+          .header-title-bg style="margin-top:-7px;" 
+            a href="/Friends" 
+              | Friends
+              b 0
+          .row style="margin-top:55px;" 
+            p style=("text-align:center; margin-bottom:20px;")  Friends do not exist
+        div style=("padding:20px; padding-bottom:0px; padding-top:7px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;") 
+          .header-title-bg style="margin-top:-7px;" 
+            a href="/Photos" 
+              | Photos
+              b 3
+          .row style="margin-top:55px;" 
+            div style=("width:33%; text-align:center; float:left; margin-bottom:15px;") 
+              div onclick=("photo_id=2; photo_show();") style=("width:45px; height:45px; margin-left:calc((100% - 45px) / 2); background-image:url('/photo/m_1063528470.jpg'); background-size:cover; background-position:center top; cursor:pointer; border-radius:4px;") 
+            div style=("width:33%; text-align:center; float:left; margin-bottom:15px;") 
+              div onclick=("photo_id=0; photo_show();") style=("width:45px; height:45px; margin-left:calc((100% - 45px) / 2); background-image:url('/photo/m_1337343398.jpg'); background-size:cover; background-position:center top; cursor:pointer; border-radius:4px;") 
+            div style=("width:33%; text-align:center; float:left; margin-bottom:15px;") 
+              div onclick=("photo_id=1; photo_show();") style=("width:45px; height:45px; margin-left:calc((100% - 45px) / 2); background-image:url('/photo/m_1044643274.jpg'); background-size:cover; background-position:center top; cursor:pointer; border-radius:4px;") 
+      .col-md-9
+        div style=("padding:20px; padding-bottom:0px; padding-top:7px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;") 
+          .header-title-bg style="margin-top:-7px;" 
+            | Information
+          .row style=("padding-top:50px; padding-bottom:15px;") 
+            .col-md-6
+              h6
+                b Basic information
+                a.icon-pencil href="/Edit" style=("color:#999; float:right;") 
+              hr style=("margin-top:5px; margin-bottom:5px;") /
+              .row
+                .col-md-6
+                  p style="color:#999;"  Date of birth:
+                .col-md-6
+                  p 2 Feb 1955
+              .row
+                .col-md-6
+                  p style="color:#999;"  Hometown:
+                .col-md-6
+                  p Not specified
+              .row
+                .col-md-6
+                  p style="color:#999;"  Marital status:
+                .col-md-6
+                  p Not selected
+            .col-md-6
+              h6
+                b Contacts:
+                a.icon-pencil href="/Edit" style=("color:#999; float:right;") 
+              hr style=("margin-top:5px; margin-bottom:5px;") /
+              .row
+                .col-md-6
+                  p style="color:#999;"  Phone:
+                .col-md-6
+                  p Not specified
+              .row
+                .col-md-6
+                  p style="color:#999;"  Skype:
+                .col-md-6
+                  p Not specified
+              .row
+                .col-md-6
+                  p style="color:#999;"  My site:
+                .col-md-6
+                  p Not specified
+        div style=("padding:15px; padding-top:7px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px; padding-bottom:0px;") 
+          .header-title-bg style=("margin-top:-7px; margin-left:-15px;") 
+            | Wall
+            b 3
+          .row style=("padding:0px; padding-top:40px;") 
+            div style=("padding:15px; background:#f5f5f5;") 
+              div style="float:left;" 
+                a href="/id2598" 
+                  img height="30" src="/avatar/2598.jpg?r=20247" style="border-radius:100px;" width="30" /
+              div style=("width:calc(100% - 30px); float:left; padding-left:10px;") 
+                textarea#id_wall onclick="this.style.height='70px';" placeholder=("Your message") style=("height:33px; width:100%; padding:7px; resize:none; border:1px solid #e1e1e8;") 
+                #upload_wall_results
+                #id_upload_wall_status style=("width:30%; float:left; padding-top:15px;") 
+                div style=("width:70%; float:left; padding-top:10px;") 
+                  button.btn.btn-primary onclick=("token='55654a6a04cf8d4ab9b75f1caea6dc89'; send_wall();") style="float:right;" type="button"  To send
+                  span#id_open_smiles_wall.icon-bird data-content=("<div><img width='20' height='20' src='/img/smiles/m_1.png' style='margin:2px; cursor:pointer;' onClick='smile_id=1; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_2.png' style='margin:2px; cursor:pointer;' onClick='smile_id=2; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_3.png' style='margin:2px; cursor:pointer;' onClick='smile_id=3; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_4.png' style='margin:2px; cursor:pointer;' onClick='smile_id=4; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_5.png' style='margin:2px; cursor:pointer;' onClick='smile_id=5; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_6.png' style='margin:2px; cursor:pointer;' onClick='smile_id=6; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_7.png' style='margin:2px; cursor:pointer;' onClick='smile_id=7; add_smile_wall();' /></div><div><img width='20' height='20' src='/img/smiles/m_8.png' style='margin:2px; cursor:pointer;' onClick='smile_id=8; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_9.png' style='margin:2px; cursor:pointer;' onClick='smile_id=9; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_10.png' style='margin:2px; cursor:pointer;' onClick='smile_id=10; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_11.png' style='margin:2px; cursor:pointer;' onClick='smile_id=11; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_12.png' style='margin:2px; cursor:pointer;' onClick='smile_id=12; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_13.png' style='margin:2px; cursor:pointer;' onClick='smile_id=13; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_14.png' style='margin:2px; cursor:pointer;' onClick='smile_id=14; add_smile_wall();' /></div><div><img width='20' height='20' src='/img/smiles/m_15.png' style='margin:2px; cursor:pointer;' onClick='smile_id=15; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_16.png' style='margin:2px; cursor:pointer;' onClick='smile_id=16; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_17.png' style='margin:2px; cursor:pointer;' onClick='smile_id=17; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_18.png' style='margin:2px; cursor:pointer;' onClick='smile_id=18; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_19.png' style='margin:2px; cursor:pointer;' onClick='smile_id=19; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_20.png' style='margin:2px; cursor:pointer;' onClick='smile_id=20; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_21.png' style='margin:2px; cursor:pointer;' onClick='smile_id=21; add_smile_wall();' /></div><div><img width='20' height='20' src='/img/smiles/m_22.png' style='margin:2px; cursor:pointer;' onClick='smile_id=22; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_23.png' style='margin:2px; cursor:pointer;' onClick='smile_id=23; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_24.png' style='margin:2px; cursor:pointer;' onClick='smile_id=24; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_25.png' style='margin:2px; cursor:pointer;' onClick='smile_id=25; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_26.png' style='margin:2px; cursor:pointer;' onClick='smile_id=26; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_27.png' style='margin:2px; cursor:pointer;' onClick='smile_id=27; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_28.png' style='margin:2px; cursor:pointer;' onClick='smile_id=28; add_smile_wall();' /></div><div><img width='20' height='20' src='/img/smiles/m_29.png' style='margin:2px; cursor:pointer;' onClick='smile_id=29; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_30.png' style='margin:2px; cursor:pointer;' onClick='smile_id=30; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_31.png' style='margin:2px; cursor:pointer;' onClick='smile_id=31; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_32.png' style='margin:2px; cursor:pointer;' onClick='smile_id=32; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_33.png' style='margin:2px; cursor:pointer;' onClick='smile_id=33; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_34.png' style='margin:2px; cursor:pointer;' onClick='smile_id=34; add_smile_wall();' /><img  width='20' height='20' src='/img/smiles/m_35.png' style='margin:2px; cursor:pointer;' onClick='smile_id=35; add_smile_wall();' /></div>") data-html="true" data-original-title="" data-placement="top" data-toggle="popover" onmouseover="$('#id_open_smiles_wall').popover();" style=("color:#999; font-size:20px; float:right; margin-top:7px; margin-right:15px; cursor:pointer;") title="" 
+            div style=("padding:15px; background:#f5f5f5; border-bottom:1px solid #e1e1e8;") 
+              .row
+            #id_wall_body style="padding:15px;" 
+#id_modal_avatar.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title Changing avatar
+      .modal-body
+        .row
+          #id_preload_ava.col-md-3 style=("text-align:center; padding-bottom:20px;") 
+          #id_upload_ava.col-md-9
+      .modal-footer
+        button.btn.btn-primary data-dismiss="modal" onclick="del_avatar();" type="button"  Remove avatar
+#id_modal_photos.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title
+          | Photo
+          b#id_p1
+          | of
+          b#id_p2
+      .modal-body style="padding:0px;" 
+        section#photo_slider.slider
+          div
+            img#photo_1206 src="/photo/1337343398.jpg" width="100%" /
+            div style=("padding:15px; height:60px; background:#f5f5f5; border-bottom:1px solid #e1e1e8;") 
+              div style=("width:50%; float:left;") 
+                div style="float:left;" 
+                  a href="/id2598" 
+                    img#id_top_avatar height="30" src="/avatar/2598.jpg?r=35830" style="border-radius:100px;" width="30" /
+                div style=("float:left; padding-left:10px;") 
+                  a href="/id2598" 
+                    | jnio
+                    span.icon-lamp style=("color:#46af48; font-size:10px;") 
+                  br/
+                  span style=("font-size:11px; color:#777;")  07.07.2017 21:11
+              div onmousedown=("return false") onselectstart=("return false") style=("width:50%; float:left; cursor:pointer;") 
+                div onclick=("object_id=1206; object_type=1; token='7fcbff43ead1bda888f37fe04f59489f'; like();") style=("float:right; cursor:pointer;") 
+                  span#like_heart_1_1206.icon-heart style=("color:#b4cee2; font-size:13px;") 
+                  span style=("color:#2B587A; margin-left:5px;")  Like
+                  span style=("color:#2B587A; font-size:13px;") 
+                    b#like_count_1_1206
+                span#popover_1_1206 data-html="true" data-placement="top" data-toggle="tooltip" onclick=("object_id=1206; object_type=1; more=false; page=1; like_peoples();") onmouseout="$('#popover_1_1206').tooltip('hide');" onmouseover="$('#popover_1_1206').tooltip('show');" style=("float:right; font-size:12px; color:#b4cee2; margin-right:10px; cursor:pointer; display:none;") title=""  &bull;&bull;&bull;
+          div
+            img#photo_1205 src="/photo/1044643274.jpg" width="100%" /
+            div style=("padding:15px; height:60px; background:#f5f5f5; border-bottom:1px solid #e1e1e8;") 
+              div style=("width:50%; float:left;") 
+                div style="float:left;" 
+                  a href="/id2598" 
+                    img#id_top_avatar height="30" src="/avatar/2598.jpg?r=58623" style="border-radius:100px;" width="30" /
+                div style=("float:left; padding-left:10px;") 
+                  a href="/id2598" 
+                    | jnio
+                    span.icon-lamp style=("color:#46af48; font-size:10px;") 
+                  br/
+                  span style=("font-size:11px; color:#777;")  07.07.2017 21:10
+              div onmousedown=("return false") onselectstart=("return false") style=("width:50%; float:left; cursor:pointer;") 
+                div onclick=("object_id=1205; object_type=1; token='0ab3b15cfb2e22281318f161730026c1'; like();") style=("float:right; cursor:pointer;") 
+                  span#like_heart_1_1205.icon-heart style=("color:#b4cee2; font-size:13px;") 
+                  span style=("color:#2B587A; margin-left:5px;")  Like
+                  span style=("color:#2B587A; font-size:13px;") 
+                    b#like_count_1_1205
+                span#popover_1_1205 data-html="true" data-placement="top" data-toggle="tooltip" onclick=("object_id=1205; object_type=1; more=false; page=1; like_peoples();") onmouseout="$('#popover_1_1205').tooltip('hide');" onmouseover="$('#popover_1_1205').tooltip('show');" style=("float:right; font-size:12px; color:#b4cee2; margin-right:10px; cursor:pointer; display:none;") title=""  &bull;&bull;&bull;
+          div
+            img#photo_1204 src="/photo/1063528470.jpg" width="100%" /
+            div style=("padding:15px; height:60px; background:#f5f5f5; border-bottom:1px solid #e1e1e8;") 
+              div style=("width:50%; float:left;") 
+                div style="float:left;" 
+                  a href="/id2598" 
+                    img#id_top_avatar height="30" src="/avatar/2598.jpg?r=52843" style="border-radius:100px;" width="30" /
+                div style=("float:left; padding-left:10px;") 
+                  a href="/id2598" 
+                    | jnio
+                    span.icon-lamp style=("color:#46af48; font-size:10px;") 
+                  br/
+                  span style=("font-size:11px; color:#777;")  07.07.2017 21:10
+              div onmousedown=("return false") onselectstart=("return false") style=("width:50%; float:left; cursor:pointer;") 
+                div onclick=("object_id=1204; object_type=1; token='ef90c766798f3428bd5e25bc053be4be'; like();") style=("float:right; cursor:pointer;") 
+                  span#like_heart_1_1204.icon-heart style=("color:#b4cee2; font-size:13px;") 
+                  span style=("color:#2B587A; margin-left:5px;")  Like
+                  span style=("color:#2B587A; font-size:13px;") 
+                    b#like_count_1_1204
+                span#popover_1_1204 data-html="true" data-placement="top" data-toggle="tooltip" onclick=("object_id=1204; object_type=1; more=false; page=1; like_peoples();") onmouseout="$('#popover_1_1204').tooltip('hide');" onmouseover="$('#popover_1_1204').tooltip('show');" style=("float:right; font-size:12px; color:#b4cee2; margin-right:10px; cursor:pointer; display:none;") title=""  &bull;&bull;&bull;
+        #id_photo_comments style="padding:15px;" 
+        div style=("padding:15px; background:#f5f5f5; border-top:1px solid #e1e1e8;") 
+          div style="float:left;" 
+            a href="/id2598" 
+              img#id_top_avatar height="30" src="/avatar/2598.jpg?r=97302" style="border-radius:100px;" width="30" /
+          div style=("width:calc(100% - 30px); float:left; padding-left:10px;") 
+            textarea#id_comment placeholder=("Your comment") style=("height:50px; width:100%; padding:7px; resize:none; border:1px solid #e1e1e8;") 
+            #upload_comment_results
+            #id_upload_comment_status style=("width:30%; float:left; padding-top:15px;") 
+            div style=("width:70%; float:left; padding-top:10px;") 
+              button.btn.btn-primary onclick=("token='82ca5e169357eb4b9df70e851fe197f5'; send_comment();") style="float:right;" type="button"  To send
+              span#id_open_smiles.icon-bird data-content=("<div><img width='20' height='20' src='/img/smiles/m_1.png' style='margin:2px; cursor:pointer;' onClick='smile_id=1; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_2.png' style='margin:2px; cursor:pointer;' onClick='smile_id=2; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_3.png' style='margin:2px; cursor:pointer;' onClick='smile_id=3; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_4.png' style='margin:2px; cursor:pointer;' onClick='smile_id=4; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_5.png' style='margin:2px; cursor:pointer;' onClick='smile_id=5; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_6.png' style='margin:2px; cursor:pointer;' onClick='smile_id=6; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_7.png' style='margin:2px; cursor:pointer;' onClick='smile_id=7; add_smile();' /></div><div><img width='20' height='20' src='/img/smiles/m_8.png' style='margin:2px; cursor:pointer;' onClick='smile_id=8; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_9.png' style='margin:2px; cursor:pointer;' onClick='smile_id=9; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_10.png' style='margin:2px; cursor:pointer;' onClick='smile_id=10; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_11.png' style='margin:2px; cursor:pointer;' onClick='smile_id=11; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_12.png' style='margin:2px; cursor:pointer;' onClick='smile_id=12; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_13.png' style='margin:2px; cursor:pointer;' onClick='smile_id=13; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_14.png' style='margin:2px; cursor:pointer;' onClick='smile_id=14; add_smile();' /></div><div><img width='20' height='20' src='/img/smiles/m_15.png' style='margin:2px; cursor:pointer;' onClick='smile_id=15; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_16.png' style='margin:2px; cursor:pointer;' onClick='smile_id=16; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_17.png' style='margin:2px; cursor:pointer;' onClick='smile_id=17; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_18.png' style='margin:2px; cursor:pointer;' onClick='smile_id=18; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_19.png' style='margin:2px; cursor:pointer;' onClick='smile_id=19; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_20.png' style='margin:2px; cursor:pointer;' onClick='smile_id=20; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_21.png' style='margin:2px; cursor:pointer;' onClick='smile_id=21; add_smile();' /></div><div><img width='20' height='20' src='/img/smiles/m_22.png' style='margin:2px; cursor:pointer;' onClick='smile_id=22; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_23.png' style='margin:2px; cursor:pointer;' onClick='smile_id=23; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_24.png' style='margin:2px; cursor:pointer;' onClick='smile_id=24; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_25.png' style='margin:2px; cursor:pointer;' onClick='smile_id=25; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_26.png' style='margin:2px; cursor:pointer;' onClick='smile_id=26; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_27.png' style='margin:2px; cursor:pointer;' onClick='smile_id=27; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_28.png' style='margin:2px; cursor:pointer;' onClick='smile_id=28; add_smile();' /></div><div><img width='20' height='20' src='/img/smiles/m_29.png' style='margin:2px; cursor:pointer;' onClick='smile_id=29; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_30.png' style='margin:2px; cursor:pointer;' onClick='smile_id=30; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_31.png' style='margin:2px; cursor:pointer;' onClick='smile_id=31; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_32.png' style='margin:2px; cursor:pointer;' onClick='smile_id=32; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_33.png' style='margin:2px; cursor:pointer;' onClick='smile_id=33; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_34.png' style='margin:2px; cursor:pointer;' onClick='smile_id=34; add_smile();' /><img  width='20' height='20' src='/img/smiles/m_35.png' style='margin:2px; cursor:pointer;' onClick='smile_id=35; add_smile();' /></div>") data-html="true" data-placement="top" data-toggle="popover" onmouseover="$('#id_open_smiles').popover();" style=("color:#999; font-size:20px; float:right; margin-top:7px; margin-right:15px; cursor:pointer;") 
+        div style=("padding:15px; background:#f5f5f5;") 
+          .row
+        div style=("padding:15px; background:#222;") 
+          .row
+            .col-md-12 style="text-align:right;" 
+              a onclick=("token='bb25f95eb3db99fc80dad22b1a25bc57'; del_photo();") style=("cursor:pointer; font-size:12px; color:#fff;")  Remove
+              span.dropdown-toggle aria-expanded="true" data-toggle="dropdown" style=("cursor:pointer; font-size:12px; color:#fff; margin-left:15px;") 
+                | Advanced
+                b.caret
+              ul.dropdown-menu style=("margin-top:-16px; border-bottom:none; border-color:#CCC; margin-left:calc(100% - 175px); margin-top:-70px;") 
+                li
+                  a onclick=("token='04a9df95f9a1ac36bacb57a5e46d1794'; save_photo();")  Save on the wall
+#id_modal_likes.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title
+          | People who liked
+          b#id_like_count
+      .modal-body style=("padding:20px 0px 20px 0px;") 
+        #id_like_peoples.row style=("margin:0px 15px 0px 15px; padding:0px; text-align:center;") 
+          div style="text-align:center;" 
+            img src="/img/preloader.gif" /
+#id_modal_visits.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title
+          | People coming to You
+          b#id_visits_count
+      .modal-body style=("padding:20px 0px 20px 0px;") 
+        #id_visits_peoples.row style=("margin:0px 15px 0px 15px; padding:0px; text-align:center;") 
+          div style="text-align:center;" 
+            img src="/img/preloader.gif" /
+#id_modal_otvety.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title
+          | Answers
+          b#id_otvety_count
+      .modal-body style=("padding:20px 0px 20px 0px;") 
+        #id_body_otvety.row style=("margin:0px 15px 0px 15px; padding:0px; text-align:center;") 
+          div style="text-align:center;" 
+            img src="/img/preloader.gif" /
+#id_comment_photo.modal style="margin-left:0px;" 
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close aria-hidden="true" data-dismiss="modal" style="font-size:18px;" type="button"  &times;
+        h4#myModalLabel.modal-title Photo
+      #id_comment_photo_body.modal-body style="padding:0px;" 
