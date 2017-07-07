@@ -1,9 +1,26 @@
-h2
-  | Forgot your password?
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Send me reset password instructions"
-= render "devise/shared/links"
+.bs-example.bs-example-tabs
+  .col-md-2 style="padding-bottom:15px;"
+    = render 'devise/sessions/login_form'
+  .col-md-2
+  .col-md-6
+    p style="text-align:center;"
+      | Please specify the
+      b
+        | E-mail
+      | that You used to log on to the website.
+    #id_form style=("padding:20px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;")
+      .header-title-bg
+        | Password recovery
+      = simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        .form-group style="margin-top:40px;"
+          = f.error_notification
+          = f.label :email, 'Your email'
+          = f.input :email, required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: {class: 'form-control', placeholder: 'Your email'}
+        .row style="margin-top:5px;"
+          .col-md-12
+            .form-group style="text-align:right;"
+              = f.button :submit, "Restore", class: 'btn btn-primary'
+

@@ -1,11 +1,37 @@
-h2
-  | Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "devise/shared/links"
+.row
+  .col-md-3
+  .col-md-6
+    p
+    h4 style="text-align:center;"  Please enter Your name and surname.
+    p style="text-align:center;"  To facilitate communication and finding friends, we have real names.
+    div style=("padding:20px; background-color:#ffffff; border:1px solid #e1e1e8; border-radius:4px; margin-bottom:20px;")
+      .header-title-bg
+        | Registration
+      br
+      br
+      br
+      hr style="border-color:#CCCCCC;"
+      = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = f.error_notification
+        .form-group
+          = f.label :email, 'E-mail'
+          = f.input :email, required: true,
+                  autofocus: true,
+                  label: false,
+                  input_html: {class: 'form-control', style: 'height:34px; border:1px solid #ccc;', placeholder: 'Your E-mail'}
+        .form-group
+          = f.label :password, 'Password'
+          = f.input :password, required: true,
+                  label: false,
+                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                  input_html: {class: 'form-control', style: 'height:34px; border:1px solid #ccc;', placeholder: 'Enter password'}
+        .form-group
+          = f.label :password_confirmation, 'Repeat password'
+          = f.input :password_confirmation, required: true,
+                  label: false,
+                  input_html: {class: 'form-control', style: 'height:34px; border:1px solid #ccc;', placeholder: 'Repeat password'}
+        #id_cap.row data-placement="top" data-toggle="tooltip" title=""
+          #id_error.col-md-9
+          .col-md-3
+            .form-group style="text-align:right;"
+              = f.button :submit, "Continue", class: 'btn btn-primary'

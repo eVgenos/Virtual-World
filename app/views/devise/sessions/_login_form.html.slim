@@ -1,0 +1,18 @@
+= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .form-group
+    = f.label :email, 'E-mail:'
+    = f.input :email, required: false, label: false,
+            autofocus: true,
+            input_html: { class: 'form-control', style: 'margin-bottom:10px;', placeholder: 'E-mail' },
+            label_html: { style: 'font-size:11px;' }
+    = f.label :password, 'Password:'
+    = f.input :password, required: false, label: false,
+            input_html: {class: 'form-control', style: 'margin-bottom:10px;', placeholder: 'Password'},
+            label_html: {style: 'font-size:11px;'}
+    /= f.input :remember_me,
+    /        input_html: {class: 'form-control'},
+    /        as: :boolean if devise_mapping.rememberable?
+    = f.button :submit, "Login", style: 'width:100%; margin-bottom:10px;', class: 'btn btn-primary'
+    = link_to 'Registration', new_user_registration_path, class: 'btn btn-primary', style: 'width:100%; margin-bottom:10px;'
+    p style="text-align:center;"
+      = link_to "Forgot your password?", new_password_path(resource_name)

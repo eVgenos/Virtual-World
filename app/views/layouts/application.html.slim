@@ -10,9 +10,23 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    p.notice
-      = notice
-    p.alert
-      = alert
-    = yield
+    = render 'shared/nav'
+
+    .container style=("margin-top:70px; margin-bottom:20px;")
+      - if notice
+        .alert.alert-info
+          a.close data-dismiss="alert" href="#" style="color: #234763;" ×
+          ul
+            li
+              = notice
+      - if alert
+        .alert.alert-warning
+          a.close data-dismiss="alert" href="#" style="color: #234763;" ×
+          ul
+            li
+              = alert
+
+      = yield
+
+    = render 'shared/footer'
  
